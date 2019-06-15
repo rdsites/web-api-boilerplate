@@ -24,3 +24,6 @@ A finalidade deste projeto é servir de ponto de partida para a execução de pr
 ## Comandos úteis
 * Para compilar: npm run build
 * Para rodar o server: node main.js (publicado na pasta dist)
+
+## Links úteis
+[Web API standards - White House](https://github.com/WhiteHouse/api-standards)
