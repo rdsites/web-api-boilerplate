@@ -8,7 +8,8 @@ import * as express from 'express';
 const models: TsoaRoute.Models = {
     "UsuarioModel": {
         "properties": {
-            "Nome": { "dataType": "object", "required": true },
+            "Id": { "dataType": "string", "default": "" },
+            "Nome": { "dataType": "string", "default": "" },
         },
     },
 };

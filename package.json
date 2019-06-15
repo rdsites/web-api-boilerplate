@@ -7,7 +7,7 @@
     "build": "tsoa swagger & tsoa routes && tsc"
   },
   "author": "Rafael Dias",
-  "license": "Open ;)",
+  "license": "MIT",
   "dependencies": {
     "@types/express": "^4.17.0",
     "@types/jsonwebtoken": "^8.3.2",
@@ -16,6 +16,7 @@
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "swagger-ui-express": "^4.0.6",
-    "tsoa": "^2.4.0"
+    "tsoa": "^2.4.0",
+    "uuid": "^3.3.2"
   }
 }

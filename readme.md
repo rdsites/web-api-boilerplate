@@ -4,7 +4,8 @@ Estrutura de pastas
 +---/ src
 +-------/ model                 Classes do modelo do domínio
 +-------/ domain-services       Regras de negócio do domínio
-+-------/ application-services  Entry pointo para regras
++-------/ application-services  Entry point para regras
++-------/ repositories          Repositórios
 +-------/ infra-data            Encapsula interação com banco de dados
 +-------/ controllers           Middleware do Express.js que consumirá os application-services
 +-------/ authentication
