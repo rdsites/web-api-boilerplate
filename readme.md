@@ -1,3 +1,6 @@
+# Boilerplate
+A finalidade deste projeto é servir de ponto de partida para a execução de projetos web-api rodando Node.js.
+
 ## Estrutura de pastas
 
 * /                               Raiz do projeto
