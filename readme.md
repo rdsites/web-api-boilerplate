@@ -18,5 +18,6 @@
 * / tsoa.json
 * / tsconfig.json
 
-### Para compilar: npm run build
-### Para rodar o server: node main.js (publicado na pasta dist)
+## Comandos úteis
+* Para compilar: npm run build
+* Para rodar o server: node main.js (publicado na pasta dist)
