@@ -9,6 +9,6 @@ export class BaseModel {
     public DeactivateDate?: Date;
 
     public isActive(): boolean {
-        return this.DeactivateDate === undefined;
+        return (!this.DeactivateDate || this.DeactivateDate === undefined);
     };
 }
