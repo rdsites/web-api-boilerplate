@@ -4,8 +4,10 @@ import { RegisterRoutes } from './routes';
 import * as swaggerUi from "swagger-ui-express";
 import bodyParser = require('body-parser');
 
+// Import here the required controllers
 import './controllers/version.controller';
 import './controllers/usuarios.controller';
+// End import
 
 const app = express();
 app.use(bodyParser.json());
@@ -19,8 +21,7 @@ try {
         res.end(JSON.stringify(swaggerDoc));
     });
 } catch (err) {
-    console.log('App----');
-    console.log(`App: ${JSON.stringify(err)}`);
+    // TODO: Create error handling
 }
 
 export { app };
