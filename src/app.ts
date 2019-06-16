@@ -1,3 +1,4 @@
+import { IncomingMessage, ServerResponse } from 'http';
 import express from 'express';
 import { RegisterRoutes } from './routes';
 import * as swaggerUi from "swagger-ui-express";
@@ -5,7 +6,6 @@ import bodyParser = require('body-parser');
 
 import './controllers/version.controller';
 import './controllers/usuarios.controller';
-import { IncomingMessage, ServerResponse } from 'http';
 
 const app = express();
 app.use(bodyParser.json());
@@ -23,6 +23,4 @@ try {
     console.log(`App: ${JSON.stringify(err)}`);
 }
 
-
-console.log('v.0.0.0');
 export { app };

@@ -8,8 +8,13 @@ import * as express from 'express';
 const models: TsoaRoute.Models = {
     "UsuarioModel": {
         "properties": {
-            "Id": { "dataType": "string", "default": "" },
-            "Nome": { "dataType": "string", "default": "" },
+            "Id": { "dataType": "string" },
+            "CreationDate": { "dataType": "datetime" },
+            "UpdateDate": { "dataType": "datetime" },
+            "DeactivateDate": { "dataType": "datetime" },
+            "Nome": { "dataType": "string", "required": true },
+            "Group": { "dataType": "string", "required": true },
+            "Permissions": { "dataType": "array", "array": { "dataType": "string" }, "required": true },
         },
     },
 };
@@ -36,7 +41,6 @@ export function RegisterRoutes(app: express.Express) {
             promiseHandler(controller, promise, response, next);
         });
     app.get('/api/v1/usuarios',
-        authenticateMiddleware([{ "api_key": [] }]),
         function(request: any, response: any, next: any) {
             const args = {
             };

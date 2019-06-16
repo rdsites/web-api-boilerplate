@@ -1,10 +1,7 @@
 import { BaseModel } from "./base.model";
 
-export class UsuarioModel extends BaseModel{
-    Nome: string;
-
-    constructor(Id: string = '', Nome: string = '') {
-        super(Id);
-        this.Nome = Nome;
-    }
+export class UsuarioModel extends BaseModel {
+    public Nome!: string;
+    public Group!: string;
+    public Permissions!: string[];
 }
