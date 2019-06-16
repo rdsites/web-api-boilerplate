@@ -9,6 +9,7 @@ export async function expressAuthentication(request: express.Request, securityNa
             token = request.headers['access_token'];
         }
 
+        // FIXME: Create authentication logic
         if (token === 'abc123456') {
             return Promise.resolve({
                 id: 1,
