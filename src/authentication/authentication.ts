@@ -3,13 +3,13 @@ import * as jwt from 'jsonwebtoken';
 
 export async function expressAuthentication(request: express.Request, securityName: string, scopes?: string[]): Promise<any> {
     console.log(`Securing resource \\${request.method} ${request.originalUrl}`);
+    // FIXME: Create authentication logic
     if (securityName === 'api_key') {
         let token;
         if (request.query && request.headers['access_token']) {
             token = request.headers['access_token'];
         }
 
-        // FIXME: Create authentication logic
         if (token === 'abc123456') {
             return Promise.resolve({
                 id: 1,
@@ -19,7 +19,7 @@ export async function expressAuthentication(request: express.Request, securityNa
             return Promise.reject({});
         }
     }
-
+    // FIXME: Create authentication logic
     if (securityName === 'jwt') {
         const token = request.body.token || request.query.token || request.headers['x-access-token'];
 
