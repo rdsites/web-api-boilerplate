@@ -1,27 +1,16 @@
-import { IncomingMessage, ServerResponse } from 'http';
-import express from 'express';
-import { RegisterRoutes } from './routes';
-import * as swaggerUi from "swagger-ui-express";
+import express, { Application } from 'express';
 import bodyParser = require('body-parser');
+import { RegisterRoutes } from './register-routes';
+import { AdmissaoService } from './hr.domain/services/admissao.service';
 
-// Import here the required controllers
-import './controllers/version.controller';
-import './controllers/usuarios.controller';
-// End import
-
-const app = express();
+const app: Application = express();
 app.use(bodyParser.json());
-RegisterRoutes(app);
 
-try {
-    const swaggerDoc = require('./swagger.json');
-    app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
-    app.get('/api/v1/swagger.json', (req: IncomingMessage, res: ServerResponse) => {
-        res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify(swaggerDoc));
-    });
-} catch (err) {
-    // TODO: Create error handling
-}
+// TODO: Implement Mediator pattern to requests (should I?)
+new RegisterRoutes(
+    '/api/v1',
+    app,
+    new AdmissaoService()
+    );
 
 export { app };

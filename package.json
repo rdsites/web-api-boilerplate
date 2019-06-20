@@ -4,7 +4,8 @@
   "description": "Boilerplate para projeto de web-api",
   "main": "main.js",
   "scripts": {
-    "build": "tsoa swagger & tsoa routes && tsc"
+    "build": "rm -fR ./dist & tsc",
+    "start": "node ./dist/server.js"
   },
   "author": "Rafael Dias",
   "license": "MIT",

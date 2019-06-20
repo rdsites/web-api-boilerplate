@@ -2,7 +2,7 @@
  * @description
  * This class encapsulates data that are default for each model be controlled by database.
  */
-export class BaseModel {
+export abstract class BaseModel {
     public Id?: string;
     public CreationDate?: Date;
     public UpdateDate?: Date;
