@@ -1,3 +1,4 @@
+# WARNING: IT IS A WORKING IN PROGRESS YET
 # Boilerplate
 A finalidade deste projeto é servir de ponto de partida para a execução de projetos web-api rodando Node.js.
 
