@@ -14,11 +14,10 @@ export class RegisterRoutes {
 
     async register() {
         this.app.post(`${this.routeURL}/admissao`, async (req: Request, res: Response, next) => {
-            // All requests are treated here
             this.iniciarAdmissaoCommand.body = req.body;
             await this.mediator.send(this.iniciarAdmissaoCommand)
-            .then(data => res.status(201).json(data.body))
-            .catch(error => res.status(501).json(error));
+                .then(data => res.status(201).json(data.body))
+                .catch(error => res.status(501).json(error));
             next();
         });
     }

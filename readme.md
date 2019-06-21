@@ -4,20 +4,19 @@ A finalidade deste projeto é servir de ponto de partida para a execução de pr
 
 ## Estrutura de pastas
 
-* /                               Raiz do projeto
-* +---/ src
-* +-------/ model               Classes do modelo do domínio
-* +-------/ services            Regras de negócio do domínio
-* +-------/ repositories        Repositórios
-* +-------/ infra               Encapsula interação com infraestrutura
-* +-------/ controllers         Middleware do Express.js que consumirá os application-services
-* +-------/ authentication      Autenticação da API
-* +---/dist                     Pacote de distribuição do projeto
-* +---/node_modules             Dependências
-* / app.ts                      Express.js
-* / main.ts                     Encapsula inicialização do server
-* / package.json
-* / tsconfig.json
+* + src
+* +--- commands         Comandos que executam os serviços do domínio
+* +--- hr.domains       Encapsula o domínio
+* +    --- contracts    Contratos do domínio
+* +    --- model        Define o modelo do domínio
+* +    --- repositories Repositório
+* +    --- service      Serviços do domínio
+* +--- infra            Encapsula interação com infraestrutura
+* + dist                Pacote de distribuição do projeto
+* + app.ts              Express.js
+* + server.ts           Encapsula inicialização do server
+* + package.json
+* + tsconfig.json
 
 ## Comandos úteis
 * Para compilar: npm run build
