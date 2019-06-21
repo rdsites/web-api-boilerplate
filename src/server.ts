@@ -7,6 +7,7 @@ const server = http.createServer(app);
 server.listen(port);
 server.on('error', (err) => {
     // TODO: Create error handling
+    console.info(`Listening on port ${JSON.stringify(err)}`);
 });
 server.on('listening', () => {
     // TODO: Improve the information after starting server
