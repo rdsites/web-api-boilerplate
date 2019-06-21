@@ -11,6 +11,7 @@ A finalidade deste projeto é servir de ponto de partida para a execução de pr
 * +    --- model        Define o modelo do domínio
 * +    --- repositories Repositório
 * +    --- service      Serviços do domínio
+* +    --- validators   Regras de validação do negócio
 * +--- infra            Encapsula interação com infraestrutura
 * + dist                Pacote de distribuição do projeto
 * + app.ts              Express.js
