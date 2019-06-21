@@ -1,13 +1,12 @@
+import express, { Application } from 'express';
+import bodyParser = require('body-parser');
 import { RegisterRoutes } from './register-routes';
 import { AdmissaoService } from './hr.domain/services/admissao.service';
 import { Mediator } from './infra/mediator';
 import { IniciarAdmissaoCommand } from './hr.domain/commands/iniciar-admissao.command';
 import { IncluirEnderecoCommand } from './hr.domain/commands/incluir-endereco';
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-
+const app: Application = express();
 app.use(bodyParser.json());
 
 new RegisterRoutes(
