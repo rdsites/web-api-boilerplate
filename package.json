@@ -4,8 +4,7 @@
   "description": "Boilerplate para projeto de web-api",
   "main": "./dist/server.js",
   "scripts": {
-    "start": "npm run serve",
-    "serve": "node dist/server.js",
+    "start": "node server.js",
     "build-local": "rm -fR ./dist & tsc",
     "start-local": "node ./dist/server.js"
   },
