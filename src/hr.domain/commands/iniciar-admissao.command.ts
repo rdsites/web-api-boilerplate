@@ -9,11 +9,11 @@ export class IniciarAdmissaoCommand implements Mediator.ICommand<IEmpregado> {
         private admissaoService: IAdmissaoService
     ){ }
 
-    excute(): IEmpregado | undefined {
+    excute(): IEmpregado {
         if (this.body) {
             return this.admissaoService.iniciar(this.body.cpf, this.body.nome, this.body.dataNascimento);
         } else {
-            return undefined;
+            throw new Error('Erro lançado');
         }
     }
 }

@@ -14,12 +14,12 @@ export class RegisterRoutes {
         this.register();
     }
 
-    async register() {
+    register() {
         this.app.post(`${this.routeURL}/admissao`, async (req: Request, res: Response, next) => {
             this.iniciarAdmissaoCommand.body = req.body;
             await this.mediator.send(this.iniciarAdmissaoCommand)
-                .then(data => res.status(201).json(data.body))
-                .catch(error => res.status(501).json(error));
+                .then((data) => { res.status(201).json(data.body); })
+                .catch((error) => { res.status(501).json(error); });
             next();
         });
 
@@ -27,8 +27,8 @@ export class RegisterRoutes {
             this.incluirEnderecoCommand.id = req.params.id;
             this.incluirEnderecoCommand.body = req.body;
             await this.mediator.send(this.incluirEnderecoCommand)
-                .then(data => res.status(200).json(data))
-                .catch(error => res.status(500).json(error));
+                .then((data) => { res.status(200).json(data); })
+                .catch((error) => { res.status(500).json(error); });
             next();
         });
     }

@@ -11,16 +11,11 @@ export class IncluirEnderecoCommand implements Mediator.ICommand<IEndereco> {
         private admissaoService: IAdmissaoService
     ) { }
 
-    excute(): IEmpregado | undefined {
-        if (this.body) {
-            this.body = this.admissaoService.incluirEndereco(this.id, this.body);
-            if (this.body) {
-                return this.body;
-            } else {
-                throw new Error('Erro lançado');
-            }
+    excute(): IEndereco {
+        if (this.id && this.body) {
+            return this.admissaoService.incluirEndereco(this.id, this.body);;
         } else {
-            return undefined;
+            throw new Error('Erro lançado');
         }
     }
 }

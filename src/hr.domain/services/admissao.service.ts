@@ -6,13 +6,13 @@ import { IDocumento } from "../contracts/documento.interface";
 
 export class AdmissaoService implements IAdmissaoService {
 
-    public iniciar(cpf: string, nome: string, dataNascimento: Date): IEmpregado | undefined {
+    public iniciar(cpf: string, nome: string, dataNascimento: Date): IEmpregado {
         let admitido: IEmpregado = new Empregado(cpf, nome, dataNascimento);
         return admitido;
     }
 
-    public admitirAposentado(empregado: IEmpregado): IEmpregado | undefined {
-        return undefined;
+    public admitirAposentado(empregado: IEmpregado): IEmpregado {
+        throw new Error("Method not implemented.");
     }
 
     buscarPorCpf(cpf: string): IEmpregado {
@@ -27,7 +27,7 @@ export class AdmissaoService implements IAdmissaoService {
         throw new Error("Method not implemented.");
     }
 
-    incluirEndereco(id: string, endereco: IEndereco): IEmpregado {
+    incluirEndereco(id: string, endereco: IEndereco): IEndereco {
         throw new Error("Method not implemented.");
     }
 
