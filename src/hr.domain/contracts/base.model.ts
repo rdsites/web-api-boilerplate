@@ -1,8 +1,6 @@
-/**
- * @description
- * This class encapsulates data that are default for each model be controlled by database.
- */
-export abstract class BaseModel {
+import { IEntity } from "./entity.interface";
+
+export abstract class BaseModel implements IEntity {
     public Id?: string;
     public CreationDate?: Date;
     public UpdateDate?: Date;

@@ -8,7 +8,7 @@ export class Empregado extends BaseModel implements IEmpregado {
     dataNascimento: Date;
     endereco?: Endereco;
 
-    constructor({ cpf, nome, dataNascimento }: { cpf: string; nome: string; dataNascimento: Date; }) {
+    constructor(cpf: string, nome: string, dataNascimento: Date) {
         super();
         this.cpf = cpf;
         this.nome = nome;
