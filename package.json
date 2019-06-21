@@ -2,9 +2,9 @@
   "name": "web-api-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate para projeto de web-api",
-  "main": "./dist/server.js",
+  "main": "./server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node ./server.js",
     "build-local": "rm -fR ./dist & tsc",
     "start-local": "node ./dist/server.js"
   },
