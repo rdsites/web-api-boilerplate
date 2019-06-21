@@ -7,7 +7,7 @@ export interface IAdmissaoService {
     buscarPorCpf(cpf: string): IEmpregado | undefined;
     listarAdmissoesEmAndamento(): IEmpregado[] | undefined;
     listarAdmissoesFinalizadas(): IEmpregado[] | undefined;
-    incluirEndereco(empregado: IEmpregado, endereco: IEndereco): IEmpregado | undefined;
+    incluirEndereco(id: string, endereco: IEndereco): IEmpregado | undefined;
     atualizarEndereco(empregado: IEmpregado, endereco: IEndereco): IEmpregado | undefined;
     excluirEndereco(empregado: IEmpregado, endereco: IEndereco): IEmpregado | undefined;
     incluirDocumento(empregado: IEmpregado, documento: IDocumento): IEmpregado | undefined;

@@ -1,16 +1,13 @@
 import { Empregado } from "../model/empregado.model";
 import { IAdmissaoService } from "../contracts/admissao.service";
 import { IEmpregado } from "../contracts/empregado.interface";
+import { IEndereco } from "../contracts/endereco.interface";
+import { IDocumento } from "../contracts/documento.interface";
 
 export class AdmissaoService implements IAdmissaoService {
 
-    constructor() {
-        console.log('Admissao....');
-    }
-
     public iniciar(cpf: string, nome: string, dataNascimento: Date): IEmpregado | undefined {
         let admitido: IEmpregado = new Empregado(cpf, nome, dataNascimento);
-        console.log(`Admitido: ${JSON.stringify(admitido)}`);
         return admitido;
     }
 
@@ -30,27 +27,27 @@ export class AdmissaoService implements IAdmissaoService {
         throw new Error("Method not implemented.");
     }
 
-    incluirEndereco(empregado: IEmpregado, endereco: import("../contracts/endereco.interface").IEndereco): IEmpregado {
+    incluirEndereco(id: string, endereco: IEndereco): IEmpregado {
         throw new Error("Method not implemented.");
     }
 
-    atualizarEndereco(empregado: IEmpregado, endereco: import("../contracts/endereco.interface").IEndereco): IEmpregado {
+    atualizarEndereco(empregado: IEmpregado, endereco: IEndereco): IEmpregado {
         throw new Error("Method not implemented.");
     }
 
-    excluirEndereco(empregado: IEmpregado, endereco: import("../contracts/endereco.interface").IEndereco): IEmpregado {
+    excluirEndereco(empregado: IEmpregado, endereco: IEndereco): IEmpregado {
         throw new Error("Method not implemented.");
     }
 
-    incluirDocumento(empregado: IEmpregado, documento: import("../contracts/documento.interface").IDocumento): IEmpregado {
+    incluirDocumento(empregado: IEmpregado, documento: IDocumento): IEmpregado {
         throw new Error("Method not implemented.");
     }
 
-    atualizarDocumento(empregado: IEmpregado, documento: import("../contracts/documento.interface").IDocumento): IEmpregado {
+    atualizarDocumento(empregado: IEmpregado, documento: IDocumento): IEmpregado {
         throw new Error("Method not implemented.");
     }
 
-    excluirDocumento(empregado: IEmpregado, documento: import("../contracts/documento.interface").IDocumento): IEmpregado {
+    excluirDocumento(empregado: IEmpregado, documento: IDocumento): IEmpregado {
         throw new Error("Method not implemented.");
     }
 }

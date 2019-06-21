@@ -4,8 +4,12 @@
   "description": "Boilerplate para projeto de web-api",
   "main": "main.js",
   "scripts": {
-    "build": "rm -fR ./dist & tsc",
-    "start": "node ./dist/server.js"
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "start": "npm run serve",
+    "serve": "node dist/server.js",
+    "build-local": "rm -fR ./dist & tsc",
+    "start-local": "node ./dist/server.js"
   },
   "author": "Rafael Dias",
   "license": "MIT",
