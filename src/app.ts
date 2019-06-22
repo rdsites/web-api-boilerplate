@@ -1,4 +1,4 @@
-import * as express from 'express';
+import express from 'express';
 import * as bodyParser from 'body-parser';
 import { RegisterRoutes } from './register-routes';
 import { AdmissaoService } from './hr.domain/services/admissao.service';
