@@ -1,3 +1,4 @@
+import * as http from 'http';
 import express from 'express';
 import * as bodyParser from 'body-parser';
 import { RegisterRoutes } from './register-routes';
@@ -17,4 +18,18 @@ new RegisterRoutes(
     new IncluirEnderecoCommand(new AdmissaoService())
 );
 
-export { app };
+
+const server = http.createServer(app);
+
+app.set('port', port);
+
+server.listen(port);
+
+server.on('error', (err) => {
+    // TODO: Create error handling
+    console.info(`Listening on port ${JSON.stringify(err)}`);
+});
+server.on('listening', () => {
+    // TODO: Improve the information after starting server
+    console.info(`Listening on port ${port}`);
+});
