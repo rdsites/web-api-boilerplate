@@ -7,6 +7,7 @@ import { Mediator } from './infra/mediator';
 import { IniciarAdmissaoCommand } from './hr.domain/commands/iniciar-admissao.command';
 import { IncluirEnderecoCommand } from './hr.domain/commands/incluir-endereco';
 
+const port = process.env.PORT || '3000';
 const app: express.Application = express();
 app.use(bodyParser.json());
 
