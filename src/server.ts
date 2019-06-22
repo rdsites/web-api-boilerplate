@@ -1,10 +1,10 @@
 import { app } from './app';
 import * as http from 'http';
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || '3000';
 const server = http.createServer(app);
 
-server.listen(port);
+app.set('port', port);
 server.on('error', (err) => {
     // TODO: Create error handling
     console.info(`Listening on port ${JSON.stringify(err)}`);
