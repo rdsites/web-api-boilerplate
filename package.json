@@ -2,11 +2,11 @@
   "name": "web-api-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate para projeto de web-api",
-  "main": "./server.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./server.js",
+    "start": "node server.js",
     "build-local": "rm -fR ./dist & tsc",
-    "start-local": "node ./dist/server.js"
+    "start-local": "node .dist/server.js"
   },
   "author": "Rafael Dias",
   "license": "MIT",
