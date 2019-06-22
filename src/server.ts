@@ -1,7 +1,24 @@
-import { app } from './app';
+import express from 'express';
+import * as bodyParser from 'body-parser';
 import * as http from 'http';
+import { RegisterRoutes } from "./register-routes";
+import { Mediator } from "./infra/mediator";
+import { IniciarAdmissaoCommand } from "./hr.domain/commands/iniciar-admissao.command";
+import { AdmissaoService } from "./hr.domain/services/admissao.service";
+import { IncluirEnderecoCommand } from "./hr.domain/commands/incluir-endereco";
 
 const port = process.env.PORT || '3000';
+const app: express.Application = express();
+app.use(bodyParser.json());
+
+new RegisterRoutes(
+    '/api/v1',
+    app,
+    new Mediator.Handler(),
+    new IniciarAdmissaoCommand(new AdmissaoService()),
+    new IncluirEnderecoCommand(new AdmissaoService())
+);
+
 const server = http.createServer(app);
 
 app.set('port', port);
