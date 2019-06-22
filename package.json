@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "build-local": "rm -fR ./dist & tsc",
-    "start-local": "node .dist/app.js"
+    "start-local": "node ./dist/app/app.js"
   },
   "author": "Rafael Dias",
   "license": "MIT",
